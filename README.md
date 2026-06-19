@@ -86,7 +86,7 @@ ML-32M/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/swikarb69/cinematch.git
+git clone https://github.com/swikarb69/CineMatch-AI.git
 cd cinematch
 ```
 
