@@ -82,3 +82,7 @@ dmypy.json
 
 # ── Trained Models ────────────────────────────────────────────
 models/*.pkl
+
+# ── Data — Large Files (download separately) ──────────────────────────────────
+data/
+outputs/
