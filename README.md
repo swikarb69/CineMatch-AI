@@ -273,5 +273,5 @@ Dataset: [MovieLens 32M](https://grouplens.org/datasets/movielens/) — F. Maxwe
 ---
 
 <div align="center">
-  <sub>Built with ❤️ and way too much popcorn &nbsp;·&nbsp; CineMatch &nbsp;·&nbsp; MovieLens 32M &nbsp;·&nbsp; TMDB API</sub>
+  <sub>"The universe speaks in patterns. I speak Python." &nbsp;·&nbsp; CineMatch &nbsp;·&nbsp; MovieLens 32M &nbsp;·&nbsp; TMDB API</sub>
 </div>
