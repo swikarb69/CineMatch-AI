@@ -32,13 +32,7 @@ env.bak/
 venv.bak/
 
 # ── Data — Large Files (download separately) ──────────────────────────────────
-data/ratings.csv
-data/tags.csv
-data/links.csv
-
-# ── Trained Models ────────────────────────────────────────────────────────────
-# Uncomment if your model file is too large for GitHub (>100 MB)
-# models/svd_model.pkl
+# Individual data files are excluded via the `data/` rule below.
 
 # ── Jupyter Notebooks ─────────────────────────────────────────────────────────
 .ipynb_checkpoints/
@@ -80,7 +74,7 @@ htmlcov/
 .dmypy.json
 dmypy.json
 
-# ── Trained Models ────────────────────────────────────────────
+# ── Trained Models ────────────────────────────────────────────────────────────
 models/*.pkl
 
 # ── Data — Large Files (download separately) ──────────────────────────────────
