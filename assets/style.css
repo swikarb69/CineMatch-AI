@@ -1,0 +1,380 @@
+/* ============================================================
+   CineMatch — Global Stylesheet
+   Loaded once at app start via app.py:_inject_css()
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap');
+
+/* ── Base ────────────────────────────────────────────────── */
+html, body, [class*="css"] {
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.stApp {
+  background-color: #09070f;
+  background-image: radial-gradient(ellipse 100% 50% at 50% -10%, rgba(157,78,221,.13) 0%, transparent 70%);
+  color: #e2e8f0;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────── */
+section[data-testid="stSidebar"] {
+  background: rgba(10,8,18,.97) !important;
+  border-right: 1px solid rgba(255,255,255,.04);
+}
+section[data-testid="stSidebar"] .stRadio > label {
+  color: #94a3b8 !important;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label {
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.05);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  transition: all .2s ease;
+  font-size: .9rem;
+  color: #cbd5e1;
+}
+section[data-testid="stSidebar"] .stRadio div[role="radiogroup"] label:hover {
+  background: rgba(224,170,255,.07);
+  border-color: rgba(224,170,255,.25);
+  color: #e0aaff;
+}
+
+/* ── Hero ────────────────────────────────────────────────── */
+.hero {
+  padding: 3.5rem 3rem;
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,.06);
+  background: linear-gradient(135deg, rgba(157,78,221,.12) 0%, rgba(15,12,28,.9) 50%, rgba(255,166,158,.07) 100%);
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+}
+.hero-eyebrow {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(224,170,255,.6);
+  margin-bottom: 10px;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 900;
+  background: linear-gradient(100deg, #ffb5a7 0%, #e0aaff 50%, #a8d8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 .75rem;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+.hero-sub {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #8898a9;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+/* ── Metrics ─────────────────────────────────────────────── */
+div[data-testid="metric-container"] {
+  background: rgba(255,255,255,.025) !important;
+  border: 1px solid rgba(255,255,255,.06) !important;
+  border-radius: 16px !important;
+  padding: 1rem 1.25rem !important;
+  backdrop-filter: blur(6px);
+}
+div[data-testid="metric-container"] label {
+  color: #64748b !important;
+  font-size: .72rem !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+}
+div[data-testid="metric-container"] div[data-testid="stMetricValue"] {
+  color: #e2e8f0 !important;
+  font-weight: 700 !important;
+  font-size: 1.6rem !important;
+}
+
+h2, .stSubheader {
+  font-family: 'Playfair Display', serif !important;
+  font-size: 1.6rem !important;
+  font-weight: 700 !important;
+  color: #f1f5f9 !important;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.stButton > button {
+  background: linear-gradient(135deg, rgba(157,78,221,.25), rgba(255,166,158,.15)) !important;
+  border: 1px solid rgba(224,170,255,.25) !important;
+  color: #e0aaff !important;
+  border-radius: 14px !important;
+  font-weight: 700 !important;
+  font-family: 'Nunito', sans-serif !important;
+  padding: .6rem 1.5rem !important;
+  transition: all .25s ease !important;
+  font-size: .95rem !important;
+  will-change: transform;
+}
+.stButton > button:hover {
+  background: linear-gradient(135deg, rgba(157,78,221,.4), rgba(255,166,158,.25)) !important;
+  border-color: rgba(224,170,255,.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(157,78,221,.2) !important;
+}
+
+/* ── Dialog inner ────────────────────────────────────────── */
+.cm-dialog { margin: -1rem -1rem 0; }
+.cm-dialog .cm-backdrop,
+.cm-dialog .cm-no-backdrop { border-radius: 12px 12px 0 0; }
+
+/* ── Inputs ──────────────────────────────────────────────── */
+.stTextInput > div > div > input {
+  background: rgba(255,255,255,.04) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 12px !important;
+  color: #e2e8f0 !important;
+  transition: border-color .2s, box-shadow .2s;
+}
+.stTextInput > div > div > input:focus {
+  border-color: rgba(224,170,255,.4) !important;
+  box-shadow: 0 0 0 3px rgba(157,78,221,.1) !important;
+}
+.stSelectbox > div > div {
+  background: rgba(255,255,255,.04) !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 12px !important;
+  color: #e2e8f0 !important;
+}
+
+hr {
+  border: none !important;
+  border-top: 1px solid rgba(255,255,255,.06) !important;
+  margin: 1.5rem 0 !important;
+}
+
+/* ── Movie Cards ─────────────────────────────────────────── */
+.movie-card {
+  display: flex;
+  background: rgba(255,255,255,.025);
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,.05);
+  border-left: 3px solid transparent;
+  gap: 24px;
+  transition: all .28s cubic-bezier(.22,1,.36,1);
+  cursor: pointer;
+  will-change: transform;
+}
+.movie-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,.045);
+  border-color: rgba(224,170,255,.22);
+  border-left-color: #c4b5fd;
+  box-shadow: 0 16px 40px rgba(0,0,0,.45);
+}
+.movie-card:hover .click-hint { opacity: 1 !important; }
+.movie-poster img {
+  border-radius: 14px;
+  width: 130px;
+  height: 195px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0,0,0,.6);
+  transition: transform .3s ease;
+  flex-shrink: 0;
+}
+.movie-card:hover .movie-poster img { transform: scale(1.04); }
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  min-width: 0;
+}
+.movie-rank {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(224,170,255,.45);
+  margin-bottom: 5px;
+}
+.movie-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 10px;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border-radius: 20px;
+  font-size: .78rem;
+  font-weight: 700;
+}
+.pill-rating  { background: rgba(245,197,24,.12);  color: #f5c518; border: 1px solid rgba(245,197,24,.2); }
+.pill-year    { background: rgba(148,163,184,.08); color: #94a3b8; border: 1px solid rgba(148,163,184,.12); }
+.pill-extra   { background: rgba(224,170,255,.1);  color: #c4b5fd; border: 1px solid rgba(224,170,255,.18); }
+.pill-genre   { background: rgba(99,179,237,.08);  color: #63b3ed; border: 1px solid rgba(99,179,237,.15); font-size: .72rem; }
+.movie-overview {
+  font-size: .88rem;
+  color: #64748b;
+  line-height: 1.65;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.click-hint {
+  margin-top: 10px;
+  font-size: .72rem;
+  color: rgba(196,181,253,.5);
+  letter-spacing: .06em;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+/* ── Section Label ───────────────────────────────────────── */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(224,170,255,.07);
+  border: 1px solid rgba(224,170,255,.12);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(224,170,255,.7);
+  margin-bottom: .75rem;
+  width: fit-content;
+}
+
+/* ── Developer Card ──────────────────────────────────────── */
+.dev-card {
+  background: rgba(255,255,255,.025);
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,.05);
+}
+.dev-card h4 { margin: 0 0 2px; color: #f1f5f9; font-size: .95rem; font-weight: 700; }
+.dev-card p  { color: #475569; font-size: .8rem; margin: 0 0 12px; }
+.dev-links   { display: flex; flex-direction: column; gap: 6px; }
+.dev-links a {
+  color: #a78bfa;
+  text-decoration: none;
+  font-size: .85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,.04);
+  background: rgba(255,255,255,.02);
+  transition: all .2s ease;
+}
+.dev-links a:hover {
+  background: rgba(167,139,250,.08);
+  border-color: rgba(167,139,250,.2);
+  color: #c4b5fd;
+}
+
+/* ── Modal ───────────────────────────────────────────────── */
+.cm-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(5,3,12,.88);
+  z-index: 99999;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  animation: cmFade .18s ease;
+}
+@keyframes cmFade { from { opacity: 0 } to { opacity: 1 } }
+.cm-box {
+  background: #110e1c;
+  border: 1px solid rgba(224,170,255,.18);
+  border-radius: 28px; max-width: 700px; width: 100%;
+  max-height: 90vh; overflow-y: auto;
+  animation: cmSlide .22s cubic-bezier(.22,1,.36,1);
+  scrollbar-width: thin; scrollbar-color: rgba(196,181,253,.15) transparent;
+  position: relative;
+}
+@keyframes cmSlide {
+  from { opacity: 0; transform: translateY(28px) }
+  to   { opacity: 1; transform: translateY(0)    }
+}
+.cm-backdrop    { width: 100%; height: 230px; object-fit: cover; border-radius: 26px 26px 0 0; display: block; }
+.cm-no-backdrop { width: 100%; height: 230px; background: linear-gradient(135deg, rgba(157,78,221,.18), #0d0b18); border-radius: 26px 26px 0 0; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+.cm-body { padding: 28px 32px 32px; }
+.cm-close {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(20,17,35,.9);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%; width: 40px; height: 40px;
+  cursor: pointer; color: #cbd5e1; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: all .2s ease; z-index: 10; line-height: 1;
+}
+.cm-close:hover { background: rgba(224,170,255,.15); color: #e0aaff; border-color: rgba(224,170,255,.4); }
+.cm-rank    { font-size: .68rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: rgba(224,170,255,.4); margin-bottom: 6px; }
+.cm-title   { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 900; color: #f8fafc; margin: 0 0 14px; line-height: 1.2; }
+.cm-pills   { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.cm-overview{ font-size: .97rem; color: #8898a9; line-height: 1.78; margin-bottom: 26px; }
+.cm-stats   { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 26px; }
+.cm-stat    { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.06); border-radius: 14px; padding: 14px; text-align: center; }
+.cm-stat-val{ font-size: 1.35rem; font-weight: 800; color: #e2e8f0; }
+.cm-stat-lbl{ font-size: .68rem; color: #475569; text-transform: uppercase; letter-spacing: .08em; margin-top: 3px; }
+.cm-tmdb {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(1,180,228,.1); border: 1px solid rgba(1,180,228,.25);
+  color: #01b4e4; border-radius: 12px; padding: 10px 20px;
+  text-decoration: none; font-weight: 700; font-size: .88rem; transition: all .2s ease;
+}
+.cm-tmdb:hover { background: rgba(1,180,228,.2); border-color: rgba(1,180,228,.45); }
+
+/* ── Misc ────────────────────────────────────────────────── */
+.stDownloadButton > button {
+  background: transparent !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  color: #64748b !important;
+  border-radius: 10px !important;
+  font-size: .85rem !important;
+}
+.stDownloadButton > button:hover {
+  border-color: rgba(224,170,255,.2) !important;
+  color: #a78bfa !important;
+}
+.stSpinner > div { border-top-color: #9d4edd !important; }
+.footer {
+  text-align: center;
+  color: #1e293b;
+  padding: 48px 20px 32px;
+  font-size: .85rem;
+  line-height: 1.8;
+}
+.footer strong { color: #334155; }
