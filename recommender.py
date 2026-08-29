@@ -141,12 +141,10 @@ def _build_popularity_model(movies: pd.DataFrame, ratings: pd.DataFrame):
     C = float(movie_stats["avg_rating"].mean())
     m = float(movie_stats["num_ratings"].quantile(0.90))
 
-    # Filter *before* computing score — avoids wasted work on low-vote movies
+    v = movie_stats["num_ratings"]
+    movie_stats["score"] = (v / (v + m)) * movie_stats["avg_rating"] + (m / (v + m)) * C
+
     qualified = movie_stats[movie_stats["num_ratings"] >= m].copy()
-
-    v = qualified["num_ratings"]
-    qualified["score"] = (v / (v + m)) * qualified["avg_rating"] + (m / (v + m)) * C
-
     qualified = qualified.merge(movies[["movieId", "title"]], on="movieId")
     qualified = qualified.sort_values("score", ascending=False).reset_index(drop=True)
 
